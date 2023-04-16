@@ -8,6 +8,7 @@ int main(){
     string s = "ADOBECODEBANC";
     string t = "ABC";
     cout << minWindow(s, t);
+    //注释
     return 0;
 }
 string minWindow(string s, string t){
@@ -30,7 +31,7 @@ string minWindow(string s, string t){
     int r = 0 + t.size();
     while (r <= s.size()) {
         string substr = s.substr(l, r-l);
-        
+        cout << substr << endl;
         if (check(substr, umap)) {
             flag = 1;
             if (r - l == t.size()) {
